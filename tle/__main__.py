@@ -7,7 +7,7 @@ import discord
 from logging.handlers import TimedRotatingFileHandler
 from os import environ
 from pathlib import Path
-import server
+from tle import server
 
 import seaborn as sns
 from discord.ext import commands
