@@ -85,8 +85,8 @@ def main():
         asyncio.create_task(discord_common.presence(bot))
 
     bot.add_listener(discord_common.bot_error_handler, name='on_command_error')
+    server.keep_alive()
     bot.run(token)
 
-server.keep_alive()
 if __name__ == '__main__':
     main()
