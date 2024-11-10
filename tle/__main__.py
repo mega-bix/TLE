@@ -7,6 +7,7 @@ import discord
 from logging.handlers import TimedRotatingFileHandler
 from os import environ
 from pathlib import Path
+import server
 
 import seaborn as sns
 from discord.ext import commands
@@ -86,6 +87,6 @@ def main():
     bot.add_listener(discord_common.bot_error_handler, name='on_command_error')
     bot.run(token)
 
-
+server.keep_alive()
 if __name__ == '__main__':
     main()
